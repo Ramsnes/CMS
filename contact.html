@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Hotjar Tracking Code for https://relaxed-fudge-43aba9.netlify.app/ -->
+    <script>
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 3491179, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    </script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="This is the contact page" />
+    <link href="/css/styles.css" rel="stylesheet" />
+    <title>Rainydays | Contact Us</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="wrapper">
+        <div>
+          <a href="/index.html">Home</a>
+        </div>
+        <div>
+          <a href="/browse.html">Browse collection</a>
+        </div>
+      </div>
+
+      <div>
+        <a href="/cart.html"
+          ><img class="cart" src="/images/cart.png" alt="cart icon" />
+        </a>
+      </div>
+    </header>
+
+    <a href="/index.html"
+      ><img
+        src="/images/RainyDays_Logo-white.png"
+        alt="White logo of Rainydays"
+        class="logobigwhite"
+    /></a>
+
+    <main>
+      <div class="contact-info">
+        <div class="contact__child">
+          <h1>Contact information:</h1>
+          <br />
+          <p>Visit us at: Lexington, New York, New York</p>
+          <p>Phone us at number: +45 555 168 789</p>
+          <p>Email us via address: Rainydays@Rainynights.rain</p>
+        </div>
+        <div class="mapAndForm">
+          <div class="contact__child-gmaps">
+            <img
+              class="gmaps"
+              src="/images/gmaps.png"
+              alt="a picture of google maps of the location"
+            />
+          </div>
+          <div class="contact__child">
+            <div id="error"></div>
+
+            <form id="form">
+              <fieldset>
+                <legend>Contact Rainydays</legend>
+                <div>
+                  <label for="name">Full name</label>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    class="form__input"
+                  />
+                </div>
+                <div>
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    class="form__input"
+                  />
+                </div>
+                <div>
+                  <label for="tel">Phone</label>
+                  <input type="tel" name="tel" id="tel" class="form__input" />
+                </div>
+                <div>
+                  <label for="message">Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="1"
+                    cols="20"
+                    class="message"
+                  ></textarea>
+                </div>
+              </fieldset>
+              <button id="formButton" type="submit">Submit</button>
+            </form>
+            <!--
+            -->
+            <!-- <div class="button-wrapper">
+              <input type="submit" value="Submit form" class="cta" />
+            </div> -->
+            <!--
+            -->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="wrapper">
+        <div><a href="/about.html">About</a></div>
+        <div><a class="current" href="/contact.html">Contact</a></div>
+      </div>
+      <div>
+        <a href="/index.html"
+          ><img
+            class="logosmall"
+            src="/images/RainyDays_Logo-white-small.png"
+            alt="small rainydays logo"
+        /></a>
+      </div>
+    </footer>
+    <div class="copyright">Copyright Rainydays LLC &copy;</div>
+    <script src="/js/contactForm.js"></script>
+  </body>
+</html>
