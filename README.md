@@ -1,8 +1,8 @@
 # CMS
 
 Noroff-admin log-in credentials:
-Username: Noroff-admin
-Password: AjcpdrFi8kW6rY9wRt2P33l#
+Username: Noroff
+Password: )C$SmOF13erp)Wff0TZ%xgd$
 
 WooCommerce
 Consumer key: ck_304001382a9bb9d52724689311f10415c020180d

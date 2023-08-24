@@ -11,25 +11,9 @@ const mainContainer = document.querySelector(".jacket-block");
 const jacketList = document.querySelector(".alljackets");
 
 // console.log({ mainContainer });
-const baseUrl = "https://api.noroff.dev/api/v1";
-const allEndpoint = "/http://ramsnes.no/wp-json/wc/store/products/";
-const specificEndpoint = "ramsnes.no/wp-json/wc/store/products/<id>"; // splitting the url for future useage
-
-//Featured product
-async function getFeatured() {
-  const featuredUrl =
-    "http://cors.noroff.dev/www.ramsnes.no/wp-json/wc/store/products?featured=true";
-
-  try {
-    const response = await fetch(featuredUrl);
-    const featured = await response.json();
-    return featured;
-  } catch (error) {
-    console.log("An error has occured in the fetching of the API");
-  }
-}
-
-getFeatured();
+const baseUrl = "https://cors.noroff.dev/ramsnes.no/wp-json/wc/store";
+const allEndpoint = "/products";
+// const specificEndpoint = "http://martial-arts.local/wp-json/wc/store/products/<id>";
 
 // fetch API and it's elements
 async function fetchData() {
@@ -52,13 +36,13 @@ async function renderHTML() {
     const productElement = document.createElement("li");
 
     // not in use this page. Renames the paramenter "element", and that variable syntax is later used for changing the innerHTML
-    productElement.id = element.id; // element = jacket
+    productElement.name = element.name; // element = jacket
 
     const productContent = `
       <div class="content">
-        <h2>${element.title}</h2>
+        <h2>${element.name}</h2>
         <p>${element.description}</p>
-        <img src="${element.image}" alt="#" />
+        <img src="${element.images[0].src}" alt="#" />
       </div>
     `;
 
@@ -66,7 +50,7 @@ async function renderHTML() {
 
     productElement.addEventListener("click", function () {
       // console.log("On click", element.id);
-      window.location.href = `details.html?id=${element.id}`;
+      window.location.href = `details.html?id=${element.name}`;
     });
 
     //each productElement is appended to the jacketList element.
@@ -75,3 +59,20 @@ async function renderHTML() {
 }
 
 renderHTML();
+
+//////
+//Featured product
+// async function getFeatured() {
+//   const featuredUrl =
+//     "http://cors.noroff.dev/http://martial-arts.local/wp-json/wc/store/products?featured=true";
+
+//   try {
+//     const response = await fetch(featuredUrl);
+//     const featured = await response.json();
+//     return featured;
+//   } catch (error) {
+//     console.log("An error has occured in the fetching of the API");
+//   }
+// }
+
+// getFeatured();
