@@ -1,5 +1,17 @@
 # CMS
 
+Noroff-admin log-in credentials:
+Username: Noroff-admin
+Password: AjcpdrFi8kW6rY9wRt2P33l#
+
+WooCommerce
+Consumer key: ck_304001382a9bb9d52724689311f10415c020180d
+Consumer secret: cs_b8668b0eab8e95cf75d0a2263417db98b4839849
+Video on authentication: https://vimeo.com/648484068/f12b15d1e1
+
+Repository:
+https://github.com/Ramsnes/CMS
+
 Goal
 Use your knowledge of WordPress content management to setup an API for consumption in your cross-course project.
 

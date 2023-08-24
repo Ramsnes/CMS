@@ -23,7 +23,7 @@ async function renderHTML() {
     loading.remove();
 
     // title change dynamically
-    document.title = `Rainy Days - ${product.title}`;
+    document.title = `Martial-arts - ${product.title}`;
 
     const description = document.getElementById("description");
     description.innerHTML = product.description;
