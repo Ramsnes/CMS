@@ -1,4 +1,4 @@
-const baseUrl = "https://api.noroff.dev/api/v1";
+const baseUrl = "https://cors.noroff.dev/ramsnes.no/wp-json/wc/store";
 const errorMsg = document.querySelector(".loadingClass");
 
 function getProductId() {
@@ -8,7 +8,7 @@ function getProductId() {
 }
 
 async function fetchProduct(id) {
-  const response = await fetch(baseUrl + `/rainy-days/${id}`);
+  const response = await fetch(baseUrl + `/products/${id}`);
   const data = await response.json();
   return data;
 }
@@ -29,13 +29,13 @@ async function renderHTML() {
     description.innerHTML = product.description;
 
     const image = document.getElementById("jacketImg");
-    image.src = product.image;
+    image.src = product.images[0].src;
 
     const jacketPrice = document.getElementById("jacketPrice");
-    jacketPrice.innerHTML = "Price: " + product.price;
+    jacketPrice.innerHTML = "Price: " + product.prices.price;
 
     const header = document.getElementById("header");
-    header.innerHTML = product.title;
+    header.innerHTML = product.name;
 
     const sizes = document.getElementById("sizes");
     sizes.innerHTML = "Sizes available: " + product.sizes;

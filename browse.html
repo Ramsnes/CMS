@@ -41,12 +41,6 @@
           <a class="current" href="/browse.html">Equipment</a>
         </div>
       </div>
-
-      <div>
-        <a href="/cart.html"
-          ><img class="cart" src="/images/cart.png" alt="cart icon" />
-        </a>
-      </div>
     </header>
 
     <main>
@@ -58,16 +52,23 @@
             class="logobigwhite"
         /></a>
       </div>
-      <div class="jacket-block">
-        <ul class="alljackets"></ul>
+      <div>
+        <div class="categories">
+          <label for="featured">Featured</label>
+          <input type="radio" id="featured" class="category" name="category" />
+          <label for="premium">Premium</label>
+          <input type="radio" id="premium" class="category" name="category" />
+          <!-- <label for="all">All</label>
+        <input type="radio" id="all" class="category" name="category" /> -->
+        </div>
+
+        <div class="jacket-block">
+          <ul class="alljackets"></ul>
+        </div>
       </div>
     </main>
-
     <footer class="footer">
-      <div class="wrapper">
-        <div><a href="/about.html">About</a></div>
-        <div><a href="/contact.html">Contact</a></div>
-      </div>
+      <div class="wrapper"></div>
       <div>
         <a href="/index.html"
           ><img

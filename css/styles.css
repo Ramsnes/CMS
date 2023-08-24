@@ -377,6 +377,23 @@ browse.html
   /* border: solid white; */
 }
 
+.categories {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 30px 0 0 0;
+}
+
+.categories label {
+  font-size: 24px; /* Adjust the font size as needed */
+  margin: 10px 0px 10px 40px;
+}
+
+.categories input {
+  width: 20px; /* Allow the input to adjust its width based on content */
+  height: 20px; /* Adjust the height of the radio buttons */
+}
+
 @media (max-width: 1000px) {
   .alljackets {
     display: flex;
