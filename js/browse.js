@@ -38,8 +38,8 @@ async function renderHTML(data) {
     const productContent = `
       <div class="content">
         <h2>${element.name}</h2>
-        <p>$ ${element.prices.price}</p>
         <img src="${element.images[0].src}" alt="#" />
+        <p>$ ${element.prices.price}</p>
       </div>
     `;
 
@@ -61,10 +61,6 @@ categories.forEach(function (category) {
     if (event.target.id === "featured") {
       newUrl += "?featured=true"; // Add featured parameter
     }
-    // else {
-    //   const categoryChosen = event.target.value;
-    //   newUrl = baseUrl + `category=${categoryChosen}`;
-    // }
 
     try {
       const data = await fetchData(newUrl);
