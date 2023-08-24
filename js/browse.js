@@ -3,23 +3,22 @@
 
 // Each endpoint should be prefixed with this base URL. For example, the full path for getting all jokes using v1 is https://api.noroff.dev/api/v1/jokes.
 
-// WooCommerce
-//Consumer key: ck_304001382a9bb9d52724689311f10415c020180d
-//Consumer secret: cs_b8668b0eab8e95cf75d0a2263417db98b4839849
-
 const mainContainer = document.querySelector(".jacket-block");
 const jacketList = document.querySelector(".alljackets");
 //categories
 const categories = document.querySelectorAll(".categories");
+//WooCommerce
+const consumerKey = "ck_304001382a9bb9d52724689311f10415c020180d";
+const consumerSecret = "cs_b8668b0eab8e95cf75d0a2263417db98b4839849";
+//JSON v3 products: https://www.ramsnes.no/wp-json/wc/v3/products?consumer_key=ck_304001382a9bb9d52724689311f10415c020180d&consumer_secret=cs_b8668b0eab8e95cf75d0a2263417db98b4839849
 
 // console.log({ mainContainer });
 const baseUrl = "https://cors.noroff.dev/ramsnes.no/wp-json/wc/store";
 const allEndpoint = "/products";
 // const specificEndpoint = "http://martial-arts.local/wp-json/wc/store/products/<id>";
 
-// fetch API and its elements
+// fetch API
 async function fetchData(url) {
-  // needs to be async since we can't wait for result before code moves on
   const response = await fetch(url);
   const data = await response.json();
   // console.log({ data }); // shows element ID's of API

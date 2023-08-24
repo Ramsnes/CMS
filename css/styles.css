@@ -74,7 +74,7 @@ main {
 }
 
 .logobigwhite {
-  width: 20%;
+  width: 10%;
   margin-left: auto;
   margin-right: auto;
   display: block; /*--
@@ -339,6 +339,7 @@ browse.html
   grid-template-columns: repeat(3, 1fr);
   display: grid;
   margin: auto;
+  padding: 0px;
 }
 
 .alljackets li div {
