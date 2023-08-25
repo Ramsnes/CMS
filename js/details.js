@@ -28,7 +28,7 @@ async function renderHTML() {
     loading.remove();
 
     // title change dynamically
-    document.title = `Martial-arts - ${product.title}`;
+    document.title = `Martial-arts - ${product.name}`;
 
     //What is shown on details.js screen
     const description = document.getElementById("description");
@@ -43,8 +43,13 @@ async function renderHTML() {
     const header = document.getElementById("header");
     header.innerHTML = product.name;
 
-    const sizes = document.getElementById("sizes");
-    sizes.innerHTML = "Sizes available: " + product.sizes;
+    if (product.is_in_stock === true) {
+      product.is_in_stock = "In stock";
+    }
+
+    //stock
+    const inStock = document.getElementById("inStock");
+    inStock.innerHTML = "Availability: " + product.is_in_stock;
   } catch (error) {
     errorMsg.innerHTML =
       '<div class="error">There was an error. Contact online support at 555-444-333.</div>';

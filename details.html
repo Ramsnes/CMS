@@ -1,22 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Hotjar Tracking Code for https://relaxed-fudge-43aba9.netlify.app/ -->
-    <script>
-      (function (h, o, t, j, a, r) {
-        h.hj =
-          h.hj ||
-          function () {
-            (h.hj.q = h.hj.q || []).push(arguments);
-          };
-        h._hjSettings = { hjid: 3491179, hjsv: 6 };
-        a = o.getElementsByTagName("head")[0];
-        r = o.createElement("script");
-        r.async = 1;
-        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-        a.appendChild(r);
-      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
-    </script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,7 +8,7 @@
     <link href="/css/styles.css" rel="stylesheet" />
     <link href="/css/details.css" rel="stylesheet" />
     <title></title>
-    <style>
+    <!-- <style>
       .notification {
         position: fixed;
         top: 40px;
@@ -41,7 +25,7 @@
       .notification.hide {
         opacity: 0;
       }
-    </style>
+    </style> -->
   </head>
 
   <body>
@@ -63,7 +47,7 @@
       <div class="whatever" id="mainJacketWrapper"></div>
 
       <div class="biglogodiv">
-        <a href="/index.html"
+        <a
           ><img
             src="/images/MMAlogo.jpeg"
             alt="White logo of Rainydays"
@@ -81,8 +65,11 @@
         <div class="salespitch">
           <div class="para-div">
             <p id="description"></p>
-            <p id="jacketPrice"></p>
-            <p id="sizes"></p>
+            <div>
+              <p id="jacketPrice"></p>
+              <p id="inStock"></p>
+            </div>
+            <!-- <p id="sizes"></p> -->
           </div>
         </div>
       </div>
