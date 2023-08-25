@@ -399,6 +399,14 @@ browse.html
   height: 20px; /* Adjust the height of the radio buttons */
 }
 
+.featuredContainer {
+  width: 300px;
+}
+
+.equipmentLarge {
+  width: 200px;
+}
+
 @media (max-width: 1000px) {
   .alljackets {
     display: flex;

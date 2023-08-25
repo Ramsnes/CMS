@@ -3,31 +3,25 @@
 
 // Each endpoint should be prefixed with this base URL. For example, the full path for getting all jokes using v1 is https://api.noroff.dev/api/v1/jokes.
 
-const mainContainer = document.querySelector(".jacket-block");
-const jacketList = document.querySelector(".alljackets");
-//categories
-const categories = document.querySelectorAll(".categories");
-//WooCommerce
-const consumerKey = "ck_304001382a9bb9d52724689311f10415c020180d";
-const consumerSecret = "cs_b8668b0eab8e95cf75d0a2263417db98b4839849";
-//JSON v3 products: https://www.ramsnes.no/wp-json/wc/v3/products?consumer_key=ck_304001382a9bb9d52724689311f10415c020180d&consumer_secret=cs_b8668b0eab8e95cf75d0a2263417db98b4839849
-
-// console.log({ mainContainer });
 const baseUrl = "https://cors.noroff.dev/ramsnes.no/wp-json/wc/store";
-const allEndpoint = "/products";
-// const specificEndpoint = "http://martial-arts.local/wp-json/wc/store/products/<id>";
+const jacketList = document.querySelector(".alljackets");
+const categories = document.querySelectorAll(".category");
 
-// fetch API
+// Fetch data from API
 async function fetchData(url) {
-  const response = await fetch(url);
-  const data = await response.json();
-  // console.log({ data }); // shows element ID's of API
-  return data;
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    throw error;
+  }
 }
 
-// renders the fetched jacket data into the HTML
-async function renderHTML(data) {
-  jacketList.innerHTML = ""; // clears the HTML before adding
+// Render jacket list
+function renderHTML(data) {
+  jacketList.innerHTML = "";
 
   // forEach jacket in the data, create a new list item element and construct the HTML content
   data.forEach(function (element) {
@@ -45,37 +39,35 @@ async function renderHTML(data) {
     productElement.innerHTML = productContent;
 
     productElement.addEventListener("click", function () {
-      window.location.href = `details.html?id=${element.name}`;
+      window.location.href = `details.html?id=${element.id}`;
     });
 
     jacketList.appendChild(productElement);
   });
 }
 
-// Categories click handler
+// Category click handler
 categories.forEach(function (category) {
-  category.onclick = async function (event) {
-    let newUrl = baseUrl + allEndpoint; // Default URL
-
-    if (event.target.id === "featured") {
-      newUrl += "?featured=true"; // Add featured parameter
+  category.addEventListener("change", async function () {
+    let newUrl = baseUrl + "/products";
+    if (category.value === "featured") {
+      newUrl += "?featured=true";
     }
-
     try {
       const data = await fetchData(newUrl);
       renderHTML(data);
     } catch (error) {
-      console.error("Error fetching data:", error);
+      console.error("Error fetching and rendering data:", error);
     }
-  };
+  });
 });
 
 // Initial fetch and render
 (async function () {
   try {
-    const initialData = await fetchData(baseUrl + allEndpoint);
+    const initialData = await fetchData(baseUrl + "/products");
     renderHTML(initialData);
   } catch (error) {
-    console.error("Error fetching initial data:", error);
+    console.error("Error fetching and rendering initial data:", error);
   }
 })();
