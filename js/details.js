@@ -3,6 +3,8 @@ const errorMsg = document.querySelector(".loadingClass");
 //WooCommerce
 const consumerKey = "ck_304001382a9bb9d52724689311f10415c020180d";
 const consumerSecret = "cs_b8668b0eab8e95cf75d0a2263417db98b4839849";
+const wooKey =
+  "https://www.ramsnes.no/wp-json/wc/v3/products?consumer_key=ck_304001382a9bb9d52724689311f10415c020180d&consumer_secret=cs_b8668b0eab8e95cf75d0a2263417db98b4839849";
 
 function getProductId() {
   const searchParams = new URLSearchParams(window.location.search);

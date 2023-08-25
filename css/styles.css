@@ -399,12 +399,15 @@ browse.html
   height: 20px; /* Adjust the height of the radio buttons */
 }
 
-.featuredContainer {
-  width: 300px;
+.featured-product {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(81, 65, 65, 0.6);
+  backdrop-filter: blur(5px);
 }
 
-.equipmentLarge {
-  width: 200px;
+.featured-product img {
+  border-radius: 10px;
 }
 
 @media (max-width: 1000px) {
