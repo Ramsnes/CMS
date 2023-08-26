@@ -456,6 +456,16 @@ browse.html
   .alljackets {
     width: 30%;
   }
+
+  .featured-product,
+  .categories {
+    width: 80%;
+  }
+
+  .categories label {
+    font-size: 14px;
+    margin: 10px 0px 10px 10px;
+  }
 }
 
 /*--
