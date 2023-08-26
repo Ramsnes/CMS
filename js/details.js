@@ -38,7 +38,7 @@ async function renderHTML() {
     image.src = product.images[0].src;
 
     const jacketPrice = document.getElementById("jacketPrice");
-    jacketPrice.innerHTML = "Price: " + product.prices.price;
+    jacketPrice.innerHTML = "Price: $" + product.prices.price;
 
     const header = document.getElementById("header");
     header.innerHTML = product.name;
