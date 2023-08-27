@@ -2,7 +2,7 @@
 
 Noroff-admin log-in credentials:
 Username: Noroff
-Password: )C$SmOF13erp)Wff0TZ%xgd$
+Password: O1v%lRUYV227Tb$S$)Z2EhwT
 
 WooCommerce
 Consumer key: ck_304001382a9bb9d52724689311f10415c020180d
